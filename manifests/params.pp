@@ -32,8 +32,6 @@ class fluentd::params {
   $service_enable = true
   $service_manage = true
 
-  # NOTE: Workaround for the following issue:
-  # https://tickets.puppetlabs.com/browse/PUP-5296
   if $facts['osfamily'] == 'redhat' {
     $service_provider = 'redhat'
   } else {
